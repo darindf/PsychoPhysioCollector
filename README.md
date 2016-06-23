@@ -6,7 +6,7 @@ Document version: 1.0
 Date: 23.06.2016
 
 ## What is the PsychoPhysioCollector for Android
-The PsychoPhysioCollector is an App for Android OS to collect physiological, kinematical by internal and external sensors and subjective data by questionnaires. It supports:
+The PsychoPhysioCollector is an App for Android OS to collect physiological, kinematical data by internal and external sensors and subjective data by questionnaires. It supports:
 
 * Zephyr BioHarness 3
 * Shimmer R2 IMUs with Shimmer ECG-Modul and Shimmer Gyro-Modul
