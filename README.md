@@ -1,6 +1,9 @@
 # PsychoPhysioCollector
 Version: 2.0
-Document version: 1.0 Date: 08.03.2016
+
+Document version: 1.0 
+
+Date: 23.06.2016
 
 ## What is the PsychoPhysioCollector for Android
 The PsychoPhysioCollector is an App for Android OS to collect physiological, kinematical by internal and external sensors and subjective data by questionnaires. It supports:
