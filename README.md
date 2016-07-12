@@ -84,4 +84,4 @@ Also the Shimmer Android driver has been used which is available on [their site]
 As by the License this is free software released by Simon Bogutzky. The authors (Simon Bogutzky and Jan Christoph Schrader) welcome external contributors to freely use this software.
 
 ## Acknowledgement
-This work is part of the Flow-Maschinen-Project ("Flow-Maschinen: Körperbewegung und Klang") at the University of Applied Sciences Bremen and funded by the BMBF (Förderkennzeichen: 03FH084PX2)
+This work is part of the research project Flow-Machines ("Flow-Machines: Body Movement and Sound", 2012-2015) at the University of Applied Sciences Bremen and funded by German Federal Ministry of Education and Research (BMBF; Förderkennzeichen: 03FH084PX2)
