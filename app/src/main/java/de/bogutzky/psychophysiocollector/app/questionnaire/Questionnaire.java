@@ -74,38 +74,45 @@ public class Questionnaire {
         this.questionsCount = 0;
         this.questionsAmount = 0;
         this.questionnaireFileName = questionnaireFileName;
-        this.questionnaire = readQuestionnaireFromJSON();
-        this.questionnaireDialog = new Dialog(activity);
-        String title = activity.getString(R.string.questionnaire);
-        String description = "";
         try {
-            title = questionnaire.getJSONObject("questionnaire").getString("title");
-            description = questionnaire.getJSONObject("questionnaire").getString("description");
-        } catch (JSONException e) {
-            e.printStackTrace();
+            this.questionnaire = readQuestionnaireFromJSON();
+        } catch (Exception e) {
+            this.questionnaireFileName = null;
+            this.questionnaire = null;
         }
-        this.questionnaireDialog.setTitle(title);
-        this.questionnaireDialog.setCancelable(false);
-
-        this.showTimestamp = System.currentTimeMillis();
-        questionnaireDialog.setContentView(R.layout.questionnaire);
-        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-        lp.copyFrom(questionnaireDialog.getWindow().getAttributes());
-        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
-        questionnaireDialog.getWindow().setAttributes(lp);
-        final TextView descriptionTextView = (TextView) questionnaireDialog.findViewById(R.id.descriptionTextView);
-        descriptionTextView.setText(Html.fromHtml(description));
-        final Button startQuestionnaireButton = (Button) questionnaireDialog.findViewById(R.id.startQuestionnaireButton);
-        startQuestionnaireButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startQuestionnaire();
+        if(this.questionnaire != null) {
+            this.questionnaireDialog = new Dialog(activity);
+            String title = activity.getString(R.string.questionnaire);
+            String description = "";
+            try {
+                title = questionnaire.getJSONObject("questionnaire").getString("title");
+                description = questionnaire.getJSONObject("questionnaire").getString("description");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-        });
-        questionnaireDialog.show();
+            this.questionnaireDialog.setTitle(title);
+            this.questionnaireDialog.setCancelable(false);
 
+            this.showTimestamp = System.currentTimeMillis();
+            questionnaireDialog.setContentView(R.layout.questionnaire);
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(questionnaireDialog.getWindow().getAttributes());
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+            questionnaireDialog.getWindow().setAttributes(lp);
+            final TextView descriptionTextView = (TextView) questionnaireDialog.findViewById(R.id.descriptionTextView);
+            descriptionTextView.setText(Html.fromHtml(description));
+            final Button startQuestionnaireButton = (Button) questionnaireDialog.findViewById(R.id.startQuestionnaireButton);
+            startQuestionnaireButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startQuestionnaire();
+                }
+            });
+            questionnaireDialog.show();
+        }
         this.saveButton = new Button(activity);
+
     }
 
     public Button getSaveButton() {
@@ -370,23 +377,20 @@ public class Questionnaire {
         }
     }
 
-    private JSONObject readQuestionnaireFromJSON() {
+    private JSONObject readQuestionnaireFromJSON() throws IOException, JSONException {
         BufferedReader input;
         JSONObject jsonObject = null;
-        try {
             input = new BufferedReader(new InputStreamReader(
                     activity.getAssets().open(this.questionnaireFileName)));
-            StringBuilder content = new StringBuilder();
-            char[] buffer = new char[1024];
-            int num;
-            while ((num = input.read(buffer)) > 0) {
-                content.append(buffer, 0, num);
-            }
-            jsonObject = new JSONObject(content.toString());
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        StringBuilder content = new StringBuilder();
+        char[] buffer = new char[1024];
+        int num;
+        while ((num = input.read(buffer)) > 0) {
+            content.append(buffer, 0, num);
         }
+        jsonObject = new JSONObject(content.toString());
+
         return jsonObject;
     }
 

@@ -128,8 +128,8 @@ public class MainActivity extends ListActivity implements ShimmerImuHandlerInter
     //private Spinner baselineQuestionnaireSpinner;
     private int selfReportInterval;
     private int selfReportVariance;
-    private String questionnaireFileName = "questionnaires/flow-short-scale-running.json";
-    //private String baselineQuestionnaireFileName = "questionnaires/flow-short-scale-running.json";
+    private String questionnaireFileName = "";
+    //private String baselineQuestionnaireFileName = "";
 
     private MenuItem addMenuItem;
     private MenuItem connectMenuItem;
@@ -173,8 +173,8 @@ public class MainActivity extends ListActivity implements ShimmerImuHandlerInter
         final SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         selfReportInterval = sharedPref.getInt("selfReportInterval", 15);
         selfReportVariance = sharedPref.getInt("selfReportVariance", 30);
-        questionnaireFileName = sharedPref.getString("questionnaireValue", "questionnaires/flow-short-scale-running.json");
-        //baselineQuestionnaireFileName = sharedPref.getString("baselineQuestionnaireValue", "questionnaires/flow-short-scale-running.json");
+        questionnaireFileName = sharedPref.getString("questionnaireValue", "");
+        //baselineQuestionnaireFileName = sharedPref.getString("baselineQuestionnaireValue", "");
         activityName = sharedPref.getString("activityName", "");
         participantFirstName = sharedPref.getString("participantFirstName", "");
         participantLastName = sharedPref.getString("participantLastName", "");
@@ -424,8 +424,9 @@ public class MainActivity extends ListActivity implements ShimmerImuHandlerInter
         //baselineQuestionnaireSpinner = (Spinner) dialog.findViewById(R.id.baseline_questionnaireSpinner);
         AssetManager assetManager = getApplicationContext().getAssets();
         String[] questionnaires = new String[0];
+        String locale = this.getResources().getConfiguration().locale.getLanguage().substring(0, 2).toLowerCase();
         try {
-            questionnaires = assetManager.list("questionnaires");
+            questionnaires = assetManager.list("questionnaires/" + locale);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -459,8 +460,9 @@ public class MainActivity extends ListActivity implements ShimmerImuHandlerInter
             public void onClick(View view) {
                 selfReportInterval = Integer.valueOf(selfReportIntervalSpinner.getSelectedItem().toString());
                 selfReportVariance = Integer.valueOf(selfReportVarianceSpinner.getSelectedItem().toString());
-                questionnaireFileName = "questionnaires/" + questionnaireSpinner.getSelectedItem().toString();
-                //baselineQuestionnaireFileName = "questionnaires/" + baselineQuestionnaireSpinner.getSelectedItem().toString();
+                String locale = view.getResources().getConfiguration().locale.getLanguage().substring(0, 2).toLowerCase();
+                questionnaireFileName = "questionnaires/" + locale + "/" + questionnaireSpinner.getSelectedItem().toString();
+                //baselineQuestionnaireFileName = "questionnaires/" + locale + "/" + baselineQuestionnaireSpinner.getSelectedItem().toString();
                 MainActivity.this.participantFirstName = participantFirstNameEditText.getText().toString().trim();
                 MainActivity.this.participantLastName = participantLastNameEditText.getText().toString().trim();
                 MainActivity.this.activityName = activityNameEditText.getText().toString().trim();
@@ -764,33 +766,35 @@ public class MainActivity extends ListActivity implements ShimmerImuHandlerInter
     }
 
     void showQuestionnaire() { // boolean baselineQuestionnaire
-        final Questionnaire questionnaire;
-        //if(baselineQuestionnaire) {
-        //    questionnaire = new Questionnaire(this, baselineQuestionnaireFileName);
-        //} else {
+        if(!"".equals(questionnaireFileName)) {
+            final Questionnaire questionnaire;
+            //if(baselineQuestionnaire) {
+            //    questionnaire = new Questionnaire(this, baselineQuestionnaireFileName);
+            //} else {
             questionnaire = new Questionnaire(this, questionnaireFileName);
-        //}
-        Button saveButton = questionnaire.getSaveButton();
-        saveButton.setOnClickListener(new View.OnClickListener() {
+            //}
+            Button saveButton = questionnaire.getSaveButton();
+            saveButton.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                String headerComments = "";
-                if (isFirstSelfReportRequest)
-                    headerComments = getHeaderComments();
+                @Override
+                public void onClick(View view) {
+                    String headerComments = "";
+                    if (isFirstSelfReportRequest)
+                        headerComments = getHeaderComments();
 
-                if (isSessionStarted) {
-                    questionnaire.saveQuestionnaireItems(root, isFirstSelfReportRequest, headerComments, null, startTimestamp);
-                    isFirstSelfReportRequest = false;
-                    if (intervalConfigured) {
-                        startTimerThread();
+                    if (isSessionStarted) {
+                        questionnaire.saveQuestionnaireItems(root, isFirstSelfReportRequest, headerComments, null, startTimestamp);
+                        isFirstSelfReportRequest = false;
+                        if (intervalConfigured) {
+                            startTimerThread();
+                        }
+                    } else {
+                        questionnaire.saveQuestionnaireItems(root, isFirstSelfReportRequest, headerComments, getFooterComments(), startTimestamp);
                     }
-                } else {
-                    questionnaire.saveQuestionnaireItems(root, isFirstSelfReportRequest, headerComments, getFooterComments(), startTimestamp);
+                    questionnaire.getQuestionnaireDialog().dismiss();
                 }
-                questionnaire.getQuestionnaireDialog().dismiss();
-            }
-        });
+            });
+        }
     }
 
     private void startTimerThread() {
