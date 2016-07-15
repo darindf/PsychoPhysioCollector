@@ -83,4 +83,5 @@
     <string name="configure_heart_rate">Heart Rate</string>
     <string name="configure_battery">Battery</string>
     <string name="configure_accelerometer">Accelerometer</string>
+    <string name="no_questionnaires_available">No questionnaire available.</string>
 </resources>

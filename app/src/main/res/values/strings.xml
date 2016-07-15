@@ -163,5 +163,6 @@
     <string name="configure_gsr" translatable="false">GSR</string>
     <string name="configure_emg" translatable="false">EMG</string>
     <string name="configure_ecg">EKG</string>
+    <string name="no_questionnaires_available">Kein Fragebogen vorhanden.</string>
 
 </resources>
