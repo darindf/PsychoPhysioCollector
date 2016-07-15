@@ -71,7 +71,7 @@
     <string name="info_could_not_read">could not be read.</string>
     <string name="study_protocol_settings_self_report_interval">Interval in minutes</string>
     <string name="study_protocol_settings_self_report_variance">Interval variance in seconds</string>
-    <string name="study_protocol_settings_configure_interval">Configure Interval kontigent protocol</string>
+    <string name="study_protocol_settings_configure_interval">Configure interval kontigent protocol</string>
     <string name="study_protocol_settings_baseline_questionnaire">Baseline-Questionnaire</string>
     <string name="permission_granted">Permission granted</string>
     <string name="device_list_paired_devices">Paired Devices</string>
