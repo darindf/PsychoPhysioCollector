@@ -16,11 +16,9 @@ Additionally it provides questionnaires that can show up at the end of a session
 ## Using the PsychoPhysioCollector
 
 ### Supported Devices
-
 * Android Devices with API 17 (4.2)+
 
-###Supported Features
-
+### Supported Features
 * Collect Data from internal sensors (Accelerometer, Gyroscope, Magnetometer, Linear Accelerometer, GPS)
 * Collect Data from Zephyr BioHarness 3
    * RR-Interval and ECG-Data implemented
@@ -30,12 +28,10 @@ Additionally it provides questionnaires that can show up at the end of a session
 * Display questionnaires that can be displayed at the end of a session and optionally on certain time intervals
 * Display data of the Shimmer IMUs in realtime for checking the setup
 
-###Documentation
-
+### Documentation
 Start the App and enable the Bluetooth. Open the option menu, search and add external sensors (see supported sensors). After establishing a connection by tapping on 'Connect Sensors', you are able to configure each sensor by tapping in the table activity. Use 'Settings' in the option menu to add the name of the participant, the name of the activity and to choose a questionnaire. In the 'Settings' you are able to configure also an interval contingent protocol with variable intervals from five to 60 minutes and interval variance from zero to 180 seconds. BEFORE equipping your participant with the Smartphone and start the session you can check the data of the Shimmer IMUs visually on the Smartphone by tapping on the table activity and choosing 'Show Graph'. Tap in option menu on 'Start Session' to start a session. If an interval contingent protocol is configured, the participant is prompted to answer a questionnaire based on the configured interval. By tapping and by the keyboard input the participant is able to answer the questions. Tap 'Stop Session' to stop the data collection. A last questionnaire will always displayed. Use another App or the android monitor to get the data of the Android file system (see psychophysiocollector/PARTICIPANT_NAME/ACTIVITY_NAME)
 
-###Installation Instructions
-
+### Installation Instructions
 Use the zipped and signed APK in the apks-directory and install it on your Smartphone. This latest version (2.0.4) has only one questionnaire -- the Flow-Short-Scale by Rheinberg et al. (2003). 
 
 If you are a familiar with running the project via Android Studio on your Smartphone, you can use the following API to create your own questionnaires in JSON in the folders assets/questionnaires/LOCALISATION_CODE/ (e.g. en or de).
@@ -45,7 +41,6 @@ If you are a familiar with running the project via Android Studio on your Smartp
 
 ```
 #!json
-
 {
    "type": "rating",
    "stars": 7,
@@ -58,7 +53,6 @@ If you are a familiar with running the project via Android Studio on your Smartp
 
 ```
 #!json
-
 {
    "type": "hidden"
 }
@@ -68,7 +62,6 @@ If you are a familiar with running the project via Android Studio on your Smartp
 
 ```
 #!json
-
 {
    "type": "text",
    "question": "The Question."
@@ -79,15 +72,13 @@ If you are a familiar with running the project via Android Studio on your Smartp
 
 ```
 #!json
-
 {
    "type": "truefalse",
    "question": "The Question."
 }
 ```
 
-###Example usage
-
+### Example Usage
 The pilot deployment was successfully used in the research project Flow-Machines ("Flow-Machines: Body Movement and Sound", 2012-2015) at the University of Applied Sciences Bremen and funded by German Federal Ministry of Education and Research (BMBF; Förderkennzeichen: 03FH084PX2).
 
 ### Used Libraries
