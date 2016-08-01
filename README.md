@@ -86,7 +86,7 @@ The Zephyr Development Tools have been used that can be found on [their site](ht
 Also the Shimmer Android driver has been used which is available on [their site](http://www.shimmersensing.com/shop/shimmer-android-id).
 
 ## Author and Contribution
-As by the License this is free software released by Simon Bogutzky. The authors (Simon Bogutzky and Jan Christoph Schrader) welcome external contributors to freely use and extend this software.
+As by the License this is free software released by the University of Applied Sciences Bremen. The authors (Simon Bogutzky and Jan Christoph Schrader) welcome external contributors to freely use and extend this software.
 
 ## Acknowledgement
 This work is part of the research project Flow-Machines ("Flow-Machines: Body Movement and Sound", 2012-2015) at the University of Applied Sciences Bremen and funded by German Federal Ministry of Education and Research (BMBF; Förderkennzeichen: 03FH084PX2)
