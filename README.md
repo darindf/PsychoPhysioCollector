@@ -1,7 +1,7 @@
 # PsychoPhysioCollector
 Version: 2.0.4
 
-Document version: 1.0.1 
+Document version: 1.0.2 
 
 Date: 07/18/2016
 
@@ -9,7 +9,7 @@ Date: 07/18/2016
 The PsychoPhysioCollector is an App for Android OS to collect physiological, kinematical data by internal and external sensors and subjective data by questionnaires. It supports:
 
 * Zephyr BioHarness 3
-* Shimmer R2 IMUs with Shimmer ECG-Modul and Shimmer Gyro-Modul
+* Shimmer R2 inertial measurement units (IMU)s with Shimmer ECG-Modul and Shimmer Gyro-Modul
 
 Additionally it provides questionnaires that can show up at the end of a session and optionally on certain time intervals.
 
