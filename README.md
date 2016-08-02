@@ -1,9 +1,9 @@
 # PsychoPhysioCollector
 Version: 2.0.4
 
-Document version: 1.0.2 
+Document version: 1.0.3 
 
-Date: 07/18/2016
+Date: 08/02/2016
 
 ## What is the PsychoPhysioCollector for Android?
 The PsychoPhysioCollector is an App for Android OS to collect physiological, kinematical data by internal and external sensors and subjective data by questionnaires. It supports:
@@ -29,12 +29,17 @@ Additionally it provides questionnaires that can show up at the end of a session
 * Display data of the Shimmer IMUs in realtime for checking the setup
 
 ### Documentation
-Start the App and enable the Bluetooth. Open the option menu, search and add external sensors (see supported sensors). After establishing a connection by tapping on 'Connect Sensors', you are able to configure each sensor by tapping in the table activity. Use 'Settings' in the option menu to add the name of the participant, the name of the activity and to choose a questionnaire. In the 'Settings' you are able to configure also an interval contingent protocol with variable intervals from five to 60 minutes and interval variance from zero to 180 seconds. BEFORE equipping your participant with the Smartphone and start the session you can check the data of the Shimmer IMUs visually on the Smartphone by tapping on the table activity and choosing 'Show Graph'. Tap in option menu on 'Start Session' to start a session. If an interval contingent protocol is configured, the participant is prompted to answer a questionnaire based on the configured interval. By tapping and by the keyboard input the participant is able to answer the questions. Tap 'Stop Session' to stop the data collection. A last questionnaire will always displayed. Use another App or the android monitor to get the data of the Android file system (see psychophysiocollector/PARTICIPANT_NAME/ACTIVITY_NAME)
+Start the App and enable the Bluetooth. Open the option menu, search and add external sensors (see supported sensors). After establishing a connection by tapping on 'Connect Sensors', you are able to configure each sensor by tapping in the table activity. Use 'Settings' in the option menu to add the name of the participant, the name of the activity and to choose a questionnaire. In the 'Settings' you are able to configure also an interval contingent protocol with variable intervals from five to 60 minutes and interval variance from zero to 180 seconds. BEFORE equipping your participant with the Smartphone and start the session you can check the data of the Shimmer IMUs visually on the Smartphone by tapping on the table activity and choosing 'Show Graph'. Tap in option menu on 'Start Session' to start a session. If an interval contingent protocol is configured, the participant is prompted to answer a questionnaire based on the configured interval. By tapping and by the keyboard input the participant is able to answer the questions. Tap 'Stop Session' to stop the data collection. A last questionnaire will always displayed. Use another App or the android monitor to get the data of the Android file system (see psychophysiocollector/ACTIVITY_NAME/PARTICIPANT_NAME)
 
 ### Installation Instructions
 Use the zipped and signed APK in the apks-directory and install it on your Smartphone. This latest version (2.0.4) has only one questionnaire -- the Flow-Short-Scale by Rheinberg et al. (2003). 
 
-If you are a familiar with running the project via Android Studio on your Smartphone, you can use the following API to create your own questionnaires in JSON in the folders assets/questionnaires/LOCALISATION_CODE/ (e.g. en or de).
+If you are familiar with importing and running a project via [Android Studio](https://developer.android.com/studio/index.html) on your Smartphone, you can use the following API to create your own questionnaires in JSON in the folders assets/questionnaires/LOCALISATION_CODE/ (e.g. en or de). 
+
+1. Import in Android Studio
+2. Grandle will setup all dependencies
+3. After that you can create questionnaires
+4. Connect your Smartphone and run the PPC on it
 
 #### Questionnaire Types
 * Rating
