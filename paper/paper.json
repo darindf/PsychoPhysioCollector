@@ -14,16 +14,28 @@
       "email": "jan.schrader@stud.hs-bremen.de",
       "name": "Jan Christoph Schrader",
       "affiliation": "University of Applied Science Bremen"
+    },
+    {
+      "@type": "Person",
+      "email": "nassrin.hajinejad@hs-bremen.de",
+      "name": "Nassrin Hajinejad",
+      "affiliation": "University of Applied Science Bremen"
+    },
+    {
+      "@type": "Person",
+      "email": "barbara.grueter@hs-bremen.de",
+      "name": "Barbara Grüter",
+      "affiliation": "University of Applied Science Bremen"
     }
   ],
   "identifier": "",
   "codeRepository": "https://github.com/sbogutzky/PsychoPhysioCollector",
-  "datePublished": "2016-07-18",
-  "dateModified": "2016-07-18",
-  "dateCreated": "2016-007-18",
+  "datePublished": "2016-08-03",
+  "dateModified": "2016-08-03",
+  "dateCreated": "2016-07-18",
   "description": "The PsychoPhysioCollector is an App for Android OS to collect physiological, kinematical data by internal and external sensors and subjective data by questionnaires.",
   "keywords": "physiological data, kinematical data, experience sampling, sensors",
   "license": "MIT",
   "title": "PsychoPhysioCollector",
-  "version": "v2.0.4"
+  "version": "v2.0.5"
 }
