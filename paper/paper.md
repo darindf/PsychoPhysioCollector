@@ -8,13 +8,13 @@ tags:
 authors:
  - name: Simon Bogutzky
    orcid: 0000-0002-9279-6549
-   affiliation: University of Applied Science Bremen
+   affiliation: University of Applied Sciences Bremen
  - name: Jan Christoph Schrader
-   affiliation: University of Applied Science Bremen
+   affiliation: University of Applied Sciences Bremen
  - name: Nassrin Hajinejad
-   affiliation: University of Applied Science Bremen
+   affiliation: University of Applied Sciences Bremen
  - name: Barbara Grüter
-   affiliation: University of Applied Science Bremen
+   affiliation: University of Applied Sciences Bremen
 date: 03 August 2016
 bibliography: paper.bib
 ---
