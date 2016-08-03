@@ -1,9 +1,16 @@
 # PsychoPhysioCollector: A Smartphone-Based Data Collection App for Psychophysiological Research
+
+Authors: Simon Bogutzky, Jan Christoph Schrader
+
+License: [MIT](https://opensource.org/licenses/MIT)
+
 Version: 2.0.5
 
-Document version: 1.0.6 
+Document version: 1.0.7 
 
 Date: 08/03/2016
+
+[![DOI](https://zenodo.org/badge/23671/sbogutzky/PsychoPhysioCollector.svg)](https://zenodo.org/badge/latestdoi/23671/sbogutzky/PsychoPhysioCollector)
 
 ## What is the PsychoPhysioCollector for Android?
 The PsychoPhysioCollector (PPC) is an App for Android OS to collect physiological, kinematical data by internal and external sensors and subjective data by questionnaires. It supports:
