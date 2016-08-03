@@ -37,4 +37,6 @@ The latest released version (2.0.5) of the PsychoPhysioCollector provides only o
 
 We used the PsychoPhysioCollector to collect ECG data, accelerations and angular velocities to identify physiological characteristics of the flow-experience while walking and running [@Bogutzky2014]. Figure 1 shows the equipment placed on a participant in our walking study.
 
+-![Figure 1: Equipment of the walking study in the research project Flow-Machines.](5-11-equipment-setup.png)
+
 # References
