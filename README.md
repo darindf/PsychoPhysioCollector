@@ -1,14 +1,13 @@
 # PsychoPhysioCollector: A Smartphone-Based Data Collection App for Psychophysiological Research
-
 Authors: Simon Bogutzky, Jan Christoph Schrader
 
 License: [MIT](https://opensource.org/licenses/MIT)
 
 Version: 2.0.5
 
-Document version: 1.0.7 
+Document version: 1.0.9 
 
-Date: 08/03/2016
+Date: 08/04/2016
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.59387.svg)](http://dx.doi.org/10.5281/zenodo.59387) [![status](http://joss.theoj.org/papers/aacbdea63ce8d4896a3c84d89f4c5ee0/status.svg)](http://joss.theoj.org/papers/aacbdea63ce8d4896a3c84d89f4c5ee0)
 
@@ -51,8 +50,7 @@ If you are familiar with importing and running a project via [Android Studio](ht
 #### Questionnaire Types
 * Rating
 
-```
-#!json
+```json
 {
    "type": "rating",
    "stars": 7,
@@ -63,8 +61,7 @@ If you are familiar with importing and running a project via [Android Studio](ht
 
 * Hidden (will not be displayed but appears in output file with "N/A")
 
-```
-#!json
+```json
 {
    "type": "hidden"
 }
@@ -72,8 +69,7 @@ If you are familiar with importing and running a project via [Android Studio](ht
 
 * Text
 
-```
-#!json
+```json
 {
    "type": "text",
    "question": "The Question."
@@ -82,8 +78,7 @@ If you are familiar with importing and running a project via [Android Studio](ht
 
 * True/False
 
-```
-#!json
+```json
 {
    "type": "truefalse",
    "question": "The Question."

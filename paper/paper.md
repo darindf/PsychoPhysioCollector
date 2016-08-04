@@ -25,7 +25,7 @@ Flow is widely understood as a source of creativity and innovation, physical and
 
 Our research activities are organized in three interconnected strands a) process-oriented modeling of walking, b) searching for implicit indices of flow while walking and running and c) supporting (flow-) experiences while walking [@Hajinejad2013]). Within the second strand, we searched for candidates for an implicit measurement method of flow-experience while walking and running.
 
-Flow research is mainly based on explicit indices of flow extracted from interview or questionnaires. Future applications have to rely on implicit indices that allow us to design novel experiences and studying dimensions of embodied interaction. An implicit flow measurement measures flow experiences without distraction the ongoing activity by a second or parallel activity.
+Flow research is mainly based on explicit indices of flow extracted from interview or questionnaires. Future applications have to rely on implicit indices that allow us to design novel experiences and studying dimensions of embodied interaction. An implicit flow measurement measures flow-experiences without distraction the ongoing activity by a second or parallel activity.
 
 In this paper, we present PsychoPhysioCollector [@Bogutzky2016a], a smartphone-based data collection app for psychophysiological research. The app allows high flexibility in designing and running sensor-enhanced experience sampling method (ESM) [@Larson1983] research protocols.
 
