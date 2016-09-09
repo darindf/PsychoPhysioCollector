@@ -9,7 +9,7 @@ Document version: 1.0.9
 
 Date: 08/04/2016
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.59678.svg)](http://dx.doi.org/10.5281/zenodo.59678) [![status](http://joss.theoj.org/papers/aacbdea63ce8d4896a3c84d89f4c5ee0/status.svg)](http://joss.theoj.org/papers/aacbdea63ce8d4896a3c84d89f4c5ee0)
+[![DOI](https://zenodo.org/badge/23671/sbogutzky/PsychoPhysioCollector.svg)](https://zenodo.org/badge/latestdoi/23671/sbogutzky/PsychoPhysioCollector) [![status](http://joss.theoj.org/papers/aacbdea63ce8d4896a3c84d89f4c5ee0/status.svg)](http://joss.theoj.org/papers/aacbdea63ce8d4896a3c84d89f4c5ee0)
 
 ## What is the PsychoPhysioCollector for Android?
 The PsychoPhysioCollector (PPC) is an App for Android OS to collect physiological, kinematical data by internal and external sensors and subjective data by questionnaires. It supports:
